@@ -1,0 +1,21 @@
+---
+- name: Deploy custom message of the day
+  hosts: "{{ node }}"
+  become: yes
+  vars:
+    message: Enjoy your day!
+    node: all
+  tasks:
+    - name: Set custom MOTD
+      ansible.builtin.copy:
+        dest: /etc/motd
+        content: |
+
+          Welcome to {{ inventory_hostname }}
+          Managed by Ansible on {{ ansible_date_time.date }}
+          {{ message }}!
+           
+        owner: root
+        group: root
+        mode: '0644'
+

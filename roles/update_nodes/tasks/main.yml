@@ -1,0 +1,11 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for package_manager
+
+- name: Update server
+  become: yes
+  ansible.builtin.apt:
+    update_cache: true
+    cache_valid_time: 3600
+    name: "*"
+    state: latest

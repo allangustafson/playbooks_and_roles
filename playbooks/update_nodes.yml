@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+    - name: include the update_nodes role
+      include_role:
+        name: update_nodes
