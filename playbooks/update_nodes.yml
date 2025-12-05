@@ -4,3 +4,7 @@
     - name: include the update_nodes role
       include_role:
         name: update_nodes
+
+    - name: include the restart_nodes role
+      include_role:
+        name: restart_nodes 
