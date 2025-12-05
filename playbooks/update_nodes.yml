@@ -5,6 +5,8 @@
       include_role:
         name: update_nodes
 
+- hosts: compute
+  tasks:
     - name: include the restart_nodes role
       include_role:
         name: restart_nodes 
