@@ -1,0 +1,8 @@
+#SPDX-License-Identifier: MIT-0
+---
+# vars file for install_packages
+
+required_packages:
+  - tmux
+  - vim
+  - python3

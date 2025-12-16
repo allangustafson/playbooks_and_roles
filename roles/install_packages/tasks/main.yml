@@ -1,0 +1,9 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for install_packages
+
+- name: Install requirements
+  become: yes
+  ansible.builtin.apt:
+    name: "{{ required_packages }}"
+    state: present
